@@ -1,3 +1,9 @@
+<?php
+require 'includes/common.php';
+if(isset($_SESSION['email'])){
+    header('location:product.php');
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,21 +16,16 @@
     </head>
     <body style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
         
-        <!--HEADER-->
-        <nav class="w3-bar w3-black w3-top w3-border-bottom">
-            <a class="branding w3-bar-item w3-mobile  w3-hover-red" href="w.html" style="text-decoration: none;">LifeStyle Store</a>
-            <div class="w3-right w3-mobile">
-                <a href="signup.html" class="w3-bar-item w3-button w3-mobile   w3-hover-red"><span class="glyphicon glyphicon-user"></span> SignUp</a>
-                <a href="login.html" class="w3-bar-item w3-button w3-mobile   w3-hover-red">Login</a>
-            </div>
-        </nav>
+        <?php
+        include 'includes/header.php';
+        ?>
 
         <!--BODY SECTION-->
         <section class="showcase">
             <div class="w3-container w3-center">
                 <h1 class="w3-text-shadow w3-animate-opacity">Shop for Style</h1>
                 <hr>
-                <a href="product.html" class="w3-button w3-red w3-large">Shop Now</a>
+                <a href="product.php" class="w3-button w3-red w3-large">Shop Now</a>
             </div>
         </section>
 
